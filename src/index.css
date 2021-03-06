@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.layout {
+  min-height: 100vh;
+}
+.sidebar {
+  min-height: 100vh;
+  height: 100%;
+  max-width: 256px;
+  position: fixed;
+}
+.sidebar > div {
+  background: #001529;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.content {
+  margin-left: 256px;
+}
+
+
+.collapse-header >div{
+  width: 80px !important;
+}

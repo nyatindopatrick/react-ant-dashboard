@@ -1,13 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, useHistory } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'antd/dist/antd.css';
+
+const Routing = () => {
+  const history = useHistory();
+  return (
+    <BrowserRouter history={history}>
+      <App />
+    </BrowserRouter>
+  );
+};
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <>
+    <Routing />
+  </>,
   document.getElementById('root')
 );
 

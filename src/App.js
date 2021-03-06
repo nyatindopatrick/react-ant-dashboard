@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.css';
+import Layout from './AdminLayout';
+import AdminLayout from './FullPageLayout';
+import { useHistory } from 'react-router-dom';
 
-function App() {
+function App(props) {
+
+console.log(props)
+
+  useEffect(() => {
+  
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {window.location.pathname === '/login' ? <AdminLayout /> : <Layout />}
     </div>
   );
 }
